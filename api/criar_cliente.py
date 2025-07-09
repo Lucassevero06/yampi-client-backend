@@ -5,8 +5,8 @@ import os
 
 app = FastAPI()
 
-YAMPI_API_KEY = os.getenv("sk_ZjJRwhWxoUR3MVgThcapXI9WAXJNrIIl2Mlbf")  # Chave secreta da sua API
-YAMPI_PRODUCT_ID = os.getenv("41410195")  # ID do produto oculto (pode ser de R$0)
+YAMPI_API_KEY = os.getenv("YAMPI_API_KEY")
+YAMPI_PRODUCT_ID = os.getenv("YAMPI_PRODUCT_ID")
 
 @app.post("/criar-cliente")
 async def criar_cliente(req: Request):
