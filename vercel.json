@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/criar_cliente.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/criar-cliente",
+      "dest": "api/criar_cliente.py"
+    }
+  ]
+}
