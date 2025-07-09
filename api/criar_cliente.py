@@ -13,7 +13,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 YAMPI_API_KEY = os.getenv("YAMPI_API_KEY")
 YAMPI_PRODUCT_ID = os.getenv("YAMPI_PRODUCT_ID")
 
