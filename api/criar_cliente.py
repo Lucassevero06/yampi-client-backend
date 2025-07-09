@@ -1,9 +1,18 @@
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 import httpx
 import os
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 YAMPI_API_KEY = os.getenv("YAMPI_API_KEY")
 YAMPI_PRODUCT_ID = os.getenv("YAMPI_PRODUCT_ID")
